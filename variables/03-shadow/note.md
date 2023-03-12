@@ -23,7 +23,6 @@ fmt.Println(x) // In ra giá trị biến x ở phạm vi bên ngoài (10)
 
 ```
 Khi thực thi, chương trình sẽ in ra các giá trị như sau
-
 ```
 10
 20
