@@ -11,7 +11,7 @@ import "fmt"
 var x int = 10 // biến x có phạm vi gói trong package main
 
 func main() {
-fmt.Println(x) // có thể truy cập biến x tại đây
+    fmt.Println(x) // có thể truy cập biến x tại đây
 }
 ```
 2. Phạm vi khối(block scope):
@@ -21,13 +21,13 @@ fmt.Println(x) // có thể truy cập biến x tại đây
 ví dụ:
 ```go
 func example() {
-x := 10 // biến x có phạm vi khối trong hàm example
-if true {
-y := 20 // biến y có phạm vi khối trong khối if
-fmt.Println(x, y) // có thể truy cập được biến x và y tại đây
-}
-fmt.Println(x) // chỉ có thể truy cập được biến x tại đây
-fmt.Println(y) // lỗi biên dịch, biến y đã bị hủy
+    x := 10 // biến x có phạm vi khối trong hàm example
+    if true {
+        y := 20 // biến y có phạm vi khối trong khối if
+        fmt.Println(x, y) // có thể truy cập được biến x và y tại đây
+    }
+    fmt.Println(x) // chỉ có thể truy cập được biến x tại đây
+    fmt.Println(y) // lỗi biên dịch, biến y đã bị hủy
 }
 ```
 
@@ -52,9 +52,9 @@ package myotherpackage
 import "path/to/mypackage"
 
 func myFunc() {
-// Truy cập biến ExportedVariable trong package mypackage
-myVar := mypackage.ExportedVariable
-fmt.Println(myVar)
+    // Truy cập biến ExportedVariable trong package mypackage
+    myVar := mypackage.ExportedVariable
+    fmt.Println(myVar)
 }
 
 ```

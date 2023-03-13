@@ -1,7 +1,7 @@
 package main
 
 import (
-	"basic/variables/02-scope/exportGo"
+	"basic/01-variables/02-scope/exportGo"
 	"fmt"
 )
 

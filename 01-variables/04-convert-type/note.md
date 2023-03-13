@@ -28,18 +28,18 @@ sai định dạng(không phải là 1 số float hợp lệ) thì sẽ không c
 trường hợp này như ví dụ dưới đây.
 ```go
 func convertStringToFloat(str string) (float64, error) {
-f, err := strconv.ParseFloat(str, 64)
-if err != nil {
-return 0, errors.New("Error: input string is not a valid float")
-}
-return f, nil
+    f, err := strconv.ParseFloat(str, 64)
+    if err != nil {
+        return 0, errors.New("Error: input string is not a valid float")
+    }
+    return f, nil
 }
 
 var g = "3.14"
 var h, err = convertStringToFloat(g)
 if err != nil {
-fmt.Println(err)
+    fmt.Println(err)
 } else {
-fmt.Printf("h have value is %v and have type is %T\n", h, h)
+    fmt.Printf("h have value is %v and have type is %T\n", h, h)
 }
 ```

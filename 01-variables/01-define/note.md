@@ -20,9 +20,9 @@ c, d := 1, 2
 5. khai báo nhiều biến khác kiểu dữ liệu trong 1 lần
 ```go
 var (
-n int32  = 100
-m string = "xin chao"
-h bool   = true
+    n int32  = 100
+    m string = "xin chao"
+    h bool   = true
 )
 ```
 
