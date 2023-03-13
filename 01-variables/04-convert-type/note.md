@@ -16,7 +16,8 @@ var b = int(a)
 var c = "22"
 var d, _ = strconv.Atoi(c)
 ```
-bình thường _ sẽ là hàm hanlde err nếu chuỗi không phải số hợp lệ tuy nhiên trong ví dụ này chúng ta không sử dụng nó nên sẽ tạm thời ẩn đi
+trong ví dụ trên chúng ta sử dụng một thuật ngữ mới đó là blank identifier (định danh trống).
+bình thường ký tự _ sẽ là hàm hanlde err nếu chuỗi không phải số hợp lệ tuy nhiên trong ví dụ này chúng ta không sử dụng nó nên sẽ tạm thời ẩn đi
 
 4. chuyển đổi kiểu số sang string chúng ta cũng import thư viện strconv và sử dụng hàm Itoa
 ```go

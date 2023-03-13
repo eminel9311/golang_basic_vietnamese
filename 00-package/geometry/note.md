@@ -51,3 +51,29 @@ func main() {
 
 
 ```
+4. đây là thứ tự mà Go sử dụng để khai báo và thiết lập các thành phần khác nhau trong một package: import --> const --> var --> init()
+    - import: Đầu tiên, chúng ta khai báo các gói (packages) cần thiết cho package hiện tại bằng từ khóa import.
+    Các gói này sẽ cung cấp các tính năng mà chúng ta sử dụng trong package của mình.
+    - const: Tiếp theo, chúng ta khai báo các hằng số (constants) cho package bằng từ khóa const.
+    Các hằng số này sẽ là các giá trị không thay đổi trong suốt thời gian chạy của chương trình.
+    - var: Sau đó, chúng ta khai báo các biến (variables) cho package bằng từ khóa var.
+    Các biến này có thể thay đổi giá trị trong suốt thời gian chạy của chương trình.
+    - init(): Cuối cùng, chúng ta sử dụng hàm init() để khởi tạo các giá trị cho các biến và hằng số trong package. Hàm init() sẽ được gọi trước khi chương trình chính (hàm main()) được thực thi.
+    Chúng ta có thể có nhiều hàm init() trong package, và chúng sẽ được thực thi theo thứ tự khai báo.
+ví dụ chúng ta sử dụng hàm init để valid data của rectLen, rectWidth
+```go
+var rectLen, rectWidth float64 = 6, 7
+
+/*
+* Hàm init được thêm vào
+*/
+func init() {
+    fmt.Println("Rectangle package initialized")
+    if rectLen < 0 {
+        log.Fatal("Length is less than zero")
+    }
+    if rectWidth < 0 {
+        log.Fatal("Width is less than zero")
+    }
+}
+```
