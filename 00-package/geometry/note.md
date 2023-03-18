@@ -59,8 +59,7 @@ func main() {
     - var: Sau đó, chúng ta khai báo các biến (variables) cho package bằng từ khóa var.
     Các biến này có thể thay đổi giá trị trong suốt thời gian chạy của chương trình.
     - init(): Cuối cùng, chúng ta sử dụng hàm init() để khởi tạo các giá trị cho các biến và hằng số trong package. Hàm init() sẽ được gọi trước khi chương trình chính (hàm main()) được thực thi.
-    Chúng ta có thể có nhiều hàm init() trong package, và chúng sẽ được thực thi theo thứ tự khai báo.
-ví dụ chúng ta sử dụng hàm init để valid data của rectLen, rectWidth
+    Chúng ta có thể có nhiều hàm init() trong package, và chúng sẽ được thực thi theo thứ tự khai báo.ví dụ chúng ta sử dụng hàm init để valid data của rectLen, rectWidth
 ```go
 var rectLen, rectWidth float64 = 6, 7
 
